@@ -1,4 +1,9 @@
 package com.codedifferently.quickpoll.repository;
 
-public interface PollRepository {
+import com.codedifferently.quickpoll.domain.Poll;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PollRepository extends CrudRepository<Poll, Long>{
+
 }
