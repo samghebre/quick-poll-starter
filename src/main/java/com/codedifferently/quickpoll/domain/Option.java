@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Option {
     @Id // specifies the primary key of the option class table, that means the primary key will be automatically generated
     @GeneratedValue //a value that has to be created for the primary key
-    @Column(name= "Option_id") //
+    @Column(name= "Option_id") //This will set an entity property value
     private Long id;
 
     @Column(name= "Option value")

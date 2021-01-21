@@ -10,12 +10,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.inject.Inject;
 
-@RestController //This annotation combines another two annotations
+@RestController //This annotation combines another two annotations @Controller and @responseBody
 public class VoteController {
     @Inject
     private VoteRepository voteRepository;
 
-    @RequestMapping(value="/polls/{pollId}/votes", method= RequestMethod.POST)
+    @RequestMapping(value="/polls/{pollId}/votes", method= RequestMethod.POST) //
     public ResponseEntity<?> createVote(@PathVariable Long pollId, @RequestBody Vote
             vote) {
         vote = voteRepository.save(vote);
